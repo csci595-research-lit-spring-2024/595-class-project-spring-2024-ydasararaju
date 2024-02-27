@@ -2,7 +2,7 @@
 \label{ch:into} % This how you label a chapter and the key (e.g., ch:into) will be used to refer this chapter ``Introduction'' later in the report. 
 % the key ``ch:into'' can be used with command \ref{ch:intor} to refere this Chapter.
 
-It is become harder and harder to understand disease patterns, particularly those associated with respiratory dissease \cite{Zimlich}. The dynamic character of these patterns, which change over time, is the source of this issue. As such, it becomes difficult to understand these patterns precisely, which results in insufficient preventative measures and therapies, which in turn encourages the spread of these diseases. Different pulmonary X-ray pictures are frequently used in the investigation of these conditions. Rising pollution levels and deteriorating public health conditions—which are predicted to get worse over time—are the main causes of the rise in these diseases. Massive outbreaks could eventually result from these conditions; one example of this is the Covid-19 virus \cite{WHO}, which mostly attacks the lungs and spreads quickly among people in close proximity. Pandemic scenarios make manual analysis more challenging. But still Predictive modeling is one workable substitute. When compared to manual validation, these models allow for faster and more efficient analysis across several sites.
+It is become harder and harder to understand disease patterns, particularly those associated with respiratory disease \cite{Zimlich}. The dynamic character of these patterns, which change over time, is the source of this issue. As such, it becomes difficult to understand these patterns precisely, which results in insufficient preventative measures and therapies, which in turn encourages the spread of these diseases. Different pulmonary X-ray pictures are frequently used in the investigation of these conditions. Rising pollution levels and deteriorating public health conditions—which are predicted to get worse over time—are the main causes of the rise in these diseases. Massive outbreaks could eventually result from these conditions; one example of this is the Covid-19 virus \cite{WHO}, which mostly attacks the lungs and spreads quickly among people in close proximity. Pandemic scenarios make manual analysis more challenging. But still Predictive modeling is one workable substitute. When compared to manual validation, these models allow for faster and more efficient analysis across several sites.
 
 
 
@@ -13,8 +13,8 @@ In this research paper, complex predictive modeling is performed which will be b
 machine learning algorithm where the chosen algorithm will be based upon deep learning 
 technique, and the input dataset \cite{Kaggle} of the model is based upon different lung X-rays 
 which are collected over different periods and are annotated with four different respiratory 
-that are “Bacterial Pneumonia”, “Corona Virus Disease”, “Normal”, “Tuberculosis”, “Viral 
-Pneumonia”. The all above-mentioned diseases can be easily spread and can cause a massive 
+that are Bacterial Pneumonia, Corona Virus Disease, Tuberculosis, Viral 
+Pneumonia. The all above-mentioned diseases can be easily spread and can cause a massive 
 pandemic in the future, and since the current research question is if the predicting model 
 helps understand the pattern of the disease therefore four diseases are sufficient to analyze 
 and the performance of the given model will be governed using different classification metric  
@@ -31,7 +31,7 @@ The study uses deep learning algorithms on lung X-ray pictures to accurately und
 \label{sec:intro_aims_obj}
 
 
-\textbf{Aims:} The aim is to create and assess a deep learning-based predictive modeling method for identifying and analyzing disease patterns in respiratory disorders using lung X-ray images labeled with "Viral Pneumonia," "Normal," "Bacterial Pneumonia," "Corona Virus Disease," and "Normal."
+\textbf{Aims:} The aim is to create and assess a deep learning-based predictive modeling method for identifying and analyzing disease patterns in respiratory disorders using lung X-ray images labeled with Viral Pneumonia, Bacterial Pneumonia and Corona Virus Disease.
 
 \textbf{Objectives:} The objectives of this research is to take a high-quality dataset of annotated lung X-ray images, choose and use deep learning algorithms for predictive modeling, train and optimize the model for precise disease pattern analysis, assess performance through a variety of metrics and comparative analyses, investigate approaches for interpreting model predictions, validate the model's generalize across a range of datasets and populations, and offer suggestions for further study and advancements in predictive modeling methods.
 
@@ -40,9 +40,7 @@ The study uses deep learning algorithms on lung X-ray pictures to accurately und
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Solution approach}
 \label{sec:intro_sol} % label of Org section
-Briefly describe the solution approach and the methodology applied in solving the set aims and objectives.
-
-Depending on the project, you may like to alter the ``heading'' of this section. Check with you supervisor. Also, check what subsection or any other section that can be added in or removed from this template.
+In order to predict the lung-related disease based on the provided data set, a predictive model is built that can accurately determine and identify the category of the disease which further helps the health care professionals in early detection and prevention of the disease. First, the collection of data set is done which contains four varieties of lung conditions. Convolutional Neural Network (CNN) is used for the image data sets which is present in the Tensor Flow library. The data set goes through a number of steps like data analysis, followed by data processing in which the data is divided into training, testing, and validation. This distribution helps the model to make a uniform and precise prediction after the model is trained on the training data set given as input. After processing the data, augmentation of the image is done in which the dataset is modified to increase the variability of the data like shifting the height, zooming the image, and increasing the quality of the image which as a result increases the amount as well as the quality of the image. Transfer learning is applied which is a technique of machine learning in which the knowledge gained while pre-training a model is applied to a new model to boost the performance of the new model. The next step is to train the model which will be used to predict the disease. The models used for this predictive modelling are VGG 19, ResNet, and MobileNet. Each of these models is very reliable and efficiently performs on the training data to give the desired outcome. Further, optimizers are used to increase the performance and efficiency of the trained models like Adam optimizer. Other evaluation metrics are used to evaluate the model’s performance like the confusion matrix, classification report, accuracy, and precision recall.
 
 \subsection{A subsection 1}
 \label{sec:intro_some_sub1}
@@ -67,9 +65,7 @@ Describe clearly what you have done/created/achieved and what the major results 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Organization of the report} %  use this section
-\label{sec:intro_org} % label of Org section
-Describe the outline of the rest of the report here. Let the reader know what to expect ahead in the report. Describe how you have organized your report. 
+
 
 \textbf{Example: how to refer a chapter, section, subsection}. This report is organised into seven chapters. Chapter~\ref{ch:lit_rev} details the literature review of this project. In Section~\ref{ch:method}...  % and so on.
 
