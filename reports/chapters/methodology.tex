@@ -6,98 +6,42 @@
 
 \section{Data Collection}
 Initially, the goal is to collect a large variety of information from many sources in order to have a thorough knowledge of the variables that lead to lung disease epidemics. Having access to both past and present information is made easier by partnerships with research groups, health departments, and healthcare organizations. Additionally, social media and internet-based sources of information complement traditional data streams, adding neighbourhood medical trends and public views of symptoms related to breathing to the dataset. A lung disease dataset is chosen from an online source Kaggle which contains the image of chest X-rays of 4 lung-related diseases. The model's input dataset is composed of multiple lung X-rays that have been gathered over time and labelled with four distinct breathing conditions. 
-\subsection{Example of a software/Web development main text structure}
+\subsection{Data Analysis}
 \label{subsec:se_chpters}
-Notice that the ``methodology'' Chapter of Software/Web development in Table~\ref{tab:soft_eng_temp} takes a standard software engineering paradigm (approach). Alternatively, these suggested sections can be the chapters of their own. Also, notice that ``Chapter 5'' in Table~\ref{tab:soft_eng_temp} is ``Testing and Validation'' which is different from the general report template mentioned in Table~\ref{tab:gen_template}. Check with your supervisor if in doubt.
-\begin{table}[ht!]
-    \centering
-    \caption{Example of a software engineering-type report structure}
-    \label{tab:soft_eng_temp}
-    \begin{tabular}{lll}     
-        \toprule                   
-        Chapter 1 & Introduction   &    \\        
-        Chapter 2 & Literature Review  &    \\                   
-        Chapter 3 & Methodology   &    \\
-        &               & Requirements specifications   \\
-        &               & Analysis   \\
-        &               & Design   \\
-        &               & Implementations   \\
-        Chapter 4 & Testing and Validation  &    \\
-        Chapter 5 & Results and Discussion      &    \\
-        Chapter 6 & Conclusions and Future Work  &    \\        
-        Chapter 7 & Reflection  &    \\                          
-        \bottomrule
-    \end{tabular}
-\end{table}
+A comprehensive analysis is performed on the gathered data to identify trends, patterns, and relationships related to lung disease epidemics. To learn more about the features of the dataset, initial investigation methods include data visualization, relationship matrices, and general statistics. Then, correlations between putative risk variables and the incidence of lung disease outbreaks are found using sophisticated statistical techniques including regression modelling and period analysis. Machine learning methods are used to find complicated relationships in the information, such as support vector machines and decision tree techniques. Preferences for choosing a model include understanding, adaptability, and reliability across various demographics and geographical areas. The accuracy and significance of data are improved for predictive modelling by data preparation. Enhancing the efficiency of models entails implementing features in addition to maintenance, normalizing, and assigning values that are not present. Overfitting hazards and computational difficulty are minimized through selected features and the reduction of dimensionality algorithms. Different test datasets are used in validation processes like bootstrapping to evaluate the efficiency and adaptability of the model. Compatibility with clinical standards and best practices is ensured by working alongside subject specialists.
 
-\subsection{Example of an algorithm analysis main text structure}
-Some project might involve the implementation of a state-of-the-art algorithm and its performance analysis and comparison with other algorithms. In that case, the suggestion in Table~\ref{tab:algo_temp} may suit you the best. 
-\begin{table}[ht!]
-    \centering
-    \caption{Example of an algorithm analysis type report structure}
-    \label{tab:algo_temp}
-    \begin{tabular}{lll}     
-        \toprule                   
-        Chapter 1 & Introduction  &    \\        
-        Chapter 2 & Literature Review  &    \\                
-        Chapter 3 & Methodology   &    \\
-        &               & Algorithms descriptions  \\
-        &               & Implementations   \\
-        &               & Experiments design   \\
-        Chapter 4 & Results       &  \\
-        Chapter 5 & Discussion and Analysis  &    \\
-        Chapter 6 & Conclusion and Future Work  &    \\        
-        Chapter 7 & Reflection  &    \\          
-        \bottomrule
-    \end{tabular}
-\end{table}
 
-\subsection{Example of an application type main text structure}
-If you are applying some algorithms/tools/technologies on some problems/datasets/etc., you may use the methodology section prescribed in Table~\ref{tab:app_temp}.  
-\begin{table}[ht!]
+\subsection{Data Processing}
+Python simplifies interacting with data easier for users by providing a large number of built-in libraries for data processing and visualization. By highlighting trends and correlations, graphical representations of data, such as graphs and charts, make it easier to analyse and examine the data. Matplotlib and Seaborn are two popular Python libraries for data visualization that are available for usage in this context. These libraries include a variety of graphs that exhibit data in diverse ways, such as line plots, bar plots, and histograms. Density charts, for example, are useful for showing the shape of data and for calculating the probability density function and ongoing dataset allocation. By visualising data set descriptions and statistical distributions, box plots, on the other hand, are a useful tool for identifying possible outliers. 
+\begin{figure}[ht]
     \centering
-    \caption{Example of an application type report structure}
-    \label{tab:app_temp}
-    \begin{tabular}{lll}     
-        \toprule                   
-        Chapter 1 & Introduction  &    \\        
-        Chapter 2 & Literature Review  &    \\                
-        Chapter 3 & Methodology   &    \\
-        &               & Problems (tasks) descriptions  \\
-        &               & Algorithms/tools/technologies/etc. descriptions  \\        
-        &               & Implementations   \\
-        &               & Experiments design and setup   \\
-        Chapter 4 & Results       &  \\
-        Chapter 5 & Discussion and Analysis  &    \\
-        Chapter 6 & Conclusion and Future Work  &    \\        
-        Chapter 7 & Reflection  &    \\          
-        \bottomrule
-    \end{tabular}
-\end{table}
+    \includegraphics[scale=0.3]{figures/graph.jpg}
+    \caption{Example figure in \LaTeX.}
+    \label{fig:chart_a}
+\end{figure}
+
+Further processing the data, the dataset is split into 3 parts. 60 percent of the data is divided into training , 20 percent data is divided into validation and the remaining 20 percent of the data is divided into testing parts. This distributed dataset is passed on as input to train the models in a much more efficient and uniform manner. By splitting up the data set into training and testing sections, it is possible to train the model on the first one and assess its performance on the remaining part while the validation part will ensure the model’s accuracy on the trained data.In order for the model to train efficiently and produce precise predictions, this guarantees that the data is spread out accurately. Additionally, dividing the dataset prevents overfitting, a condition in which a model performs well on training data but badly on fresh data. 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{figures/graph2.jpg}
+    \caption{Example figure in \LaTeX.}
+    \label{fig:chart_a}
+\end{figure}
+
+
+\subsection{Data Agumentation}
+In order to increase the diversity of input data, data augmentation is used to add authentic yet unpredictable modifications to the training dataset that is supplied for neural network models. By minimally modifying the photos, it seeks to produce a copy of the original dataset. The method increases both the amount as well as the standard of the data. TensorFlow's Image Data Generator is used to apply different image-level alterations, such as height and width shifting, enlargement, and other required modifications, to the dataset. By making these little changes, the original dataset may be replicated with a greater degree of variability in the data. Rotation, width shift, zoom, and horizontal inversion are the four specific procedures that are used. The other changes are also done in this manner to make the dataset more diverse. In order to avoid underfitting and guarantee that the model gains knowledge from a variety of instances, image augmentation is especially applied to the training data.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{figures/scan .jpg}
+    \caption{Example figure in \LaTeX.}
+    \label{fig:chart_a}
+\end{figure}
+
 
 \subsection{Example of a science lab-type main text structure}
 If you are doing a science lab experiment type of project, you may use the  methodology section suggested in Table~\ref{tab:lab_temp}. In this kind of project, you may refer to the ``Methodology'' section as ``Materials and Methods.''
-\begin{table}[ht!]
-    \centering
-    \caption{Example of a science lab experiment-type report structure}
-    \label{tab:lab_temp}
-    \begin{tabular}{lll}     
-        \toprule                   
-        Chapter 1 & Introduction  &    \\        
-        Chapter 2 & Literature Review  &    \\                
-        Chapter 3 & Materials and Methods   &    \\
-        &               & Problems (tasks) description  \\
-        &               & Materials \\        
-        &               & Procedures  \\                
-        &               & Implementations   \\
-        &               & Experiment set-up   \\
-        Chapter 4 & Results       &  \\
-        Chapter 5 & Discussion and Analysis  &    \\
-        Chapter 6 & Conclusion and Future Work  &    \\        
-        Chapter 7 & Reflection  &    \\          
-        \bottomrule
-    \end{tabular}
-\end{table}
+
 
 \section{Example of an Equation in \LaTeX}
 Eq.~\ref{eq:eq_example} [note that this is an example of an equation's in-text citation] is an example of an equation in \LaTeX. In Eq.~\eqref{eq:eq_example}, $ s $ is the mean of elements $ x_i \in \mathbf{x} $: 
