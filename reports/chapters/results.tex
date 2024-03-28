@@ -1,53 +1,6 @@
 \chapter{Results}
 \label{ch:results}
-The results chapter tells a reader about your findings based on the methodology you have used to solve the investigated problem. For example: 
-\begin{itemize}
-    \item If your project aims to develop a software/web application, the results may be the developed software/system/performance of the system, etc., obtained using a relevant methodological approach in software engineering. 
-    
-    \item If your project aims to implement an algorithm for its analysis, the results may be the performance of the algorithm obtained using a relevant experiment design. 
-    
-    \item If your project aims to solve some problems/research questions over a collected dataset, the results may be the findings obtained using the applied tools/algorithms/etc. 
-\end{itemize}
-Arrange your results and findings in a logical sequence. 
-
-
-
-\section{A section}
-
-...
-
-\clearpage
-\section{Example of a Table in \LaTeX}
-Table~\ref{tab:_ex_tab} is an example of a table created using the package \LaTeX  ``booktabs.'' do check the link: \href{https://en.wikibooks.org/wiki/LaTeX/Tables}{wikibooks.org/wiki/LaTeX/Tables} for more details. A table should be clean and readable. Unnecessary horizontal lines and vertical lines in tables make them unreadable and messy. The example in Table~\ref{tab:_ex_tab} uses a minimum number of liens (only necessary ones). Make sure that the top rule and bottom rule (top and bottom horizontal lines) of a table are present. 
-
-\begin{table}[h!]
-    \centering
-    \caption{Example of a table in \LaTeX}
-    \label{tab:_ex_tab}
-    \begin{tabular}{llr}     
-        \toprule
-        \multicolumn{2}{c}{Bike} \\
-        \cmidrule(r){1-2}
-        Type    &  Color & Price (\pounds) \\
-        \midrule
-        Electric    & black   & 700   \\
-        Hybrid      & blue    & 500   \\
-        Road        & blue    & 300   \\
-        Mountain    & red     & 300   \\
-        Folding     & black   & 500   \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\section{Example of captions style}
-
-\begin{itemize}
-    \item The \textbf{caption of a Figure (artwork) goes below} the artwork (Figure/Graphics/illustration). See example artwork in Figure~\ref{fig:chart_a}. 
-    \item  The \textbf{caption of a Table goes above} the table. See the example in Table~\ref{tab:_ex_tab}.
-    \item  The \textbf{caption of an Algorithm goes above} the algorithm. See the example in Algorithm~\ref{algo:algo_example}.
-    \item The \textbf{caption of a Listing goes below} the Listing  (Code snippet). See example listing in Listing~\ref{list:python_code_ex}. 
-\end{itemize} 
-
+This research aims to revolutionize the early identification and prevention of lung-related conditions. Diagnosis of such disease at an advanced level is necessary due to the rise in the number of patients who suffer from such conditions and it should be treated as soon as possible to avoid the growing complexities of respiratory illness. For this, a comprehensive dataset is chosen which contains the X-ray images labeled with four different classes of respiratory conditions. Initially, after analyzing and processing the dataset, it was found that four different respiratory conditions which are “Bacterial Pneumonia”, “Corona Virus Disease”, “Normal”, “Tuberculosis”, and “Viral Pneumonia” are grouped into training, testing, and validation types and a predictive model is built using deep learning and neural network models. The models used are VGG 19, MobileNet, and ResNet and these are provided with these trained image data to recognize patterns that indicate different lung illnesses by closely studying and interpreting the data, which involves sharing and improving expertise. These innovative models are renowned for their precision in picture classification. For this research, Recurrent neural network models are chosen which are VGG 19, MobileNet, and ResNet. After training the VGG 19 model and running it for 20 epochs, it is found that the accuracy of the model is 0.7793 while the accuracy of the MoibleNet model turns out to be around 0.83 which is better than the VGG 19 model. The ResNet model could not show much accuracy as compared to the other models because of which it is discarded and is not trained for further epochs. Therefore, the preferred model with the best accuracy is the MobileNet. These models are further enhanced by using an optimizer like an Adam Optimizer which fine-tunes these models based on certain parameters for promising results.
 
 
 

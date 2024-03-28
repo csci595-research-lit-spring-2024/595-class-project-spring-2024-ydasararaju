@@ -37,140 +37,52 @@ In order to increase the diversity of input data, data augmentation is used to a
     \caption{Example figure in \LaTeX.}
     \label{fig:chart_a}
 \end{figure}
+\section {Implementation}
+prediction of lung disease outbreaks is VGG 19, Mobile Net, and RestNet. When the result parameter indicates whether a lung disease epidemic is present or not, it works well for binary categorization applications. Based on input parameters such as patient statistics, surroundings, and past illness trends, the model calculates the likelihood that an epidemic will occur. VGG 19 measures how predictor variables and the chance of an outbreak of lung disease are related to each other by matching an exponential function to the input data. Model parameters help with understanding and risk evaluation by revealing the intensity and course of relationships. These models, regardless of their clarity, have several benefits, such as resilience Establishing predictive algorithms that can precisely and promptly anticipate epidemics of lung diseases is the last step. Prediction strength and accuracy are improved by combined learning techniques. Metrics for evaluating models, such as the degree of consciousness and particularity, are used to measure their predictive power and direct their modification. Model adjustment and ongoing monitoring respond to varying data distributions. By clarifying the primary variables influencing forecasted results, understanding tools promote the involvement of stakeholders and decision-making. Preventive treatments and utilization of resource techniques are made possible by incorporating public health monitoring systems and systems that support clinical decisions.
 
+A convolutional neural network-based deep learning model is developed to identify the kind of lung illness by extracting relevant data from the input picture during training and assessment. It is possible to gain additional insight into the demand for computational resources within the healthcare industry and the potential of predictive analytics and modeling for analyzing healthcare management today and preventing global disease outbreaks in the future by addressing research challenges. The earlier pertinent preventative measures are implemented, the more quickly the disease outbreak can be prevented. To determine how well the model can detect the condition, it is evaluated using a variety of classification measures, including the f1 score and precision score. The model will be trained and predicted entirely in Python, and several libraries including Tensorflow, OpenCV, and Keras will be utilized to construct the model and store it locally for further prediction and improvement. 
 
-\subsection{Example of a science lab-type main text structure}
-If you are doing a science lab experiment type of project, you may use the  methodology section suggested in Table~\ref{tab:lab_temp}. In this kind of project, you may refer to the ``Methodology'' section as ``Materials and Methods.''
-
-
-\section{Example of an Equation in \LaTeX}
-Eq.~\ref{eq:eq_example} [note that this is an example of an equation's in-text citation] is an example of an equation in \LaTeX. In Eq.~\eqref{eq:eq_example}, $ s $ is the mean of elements $ x_i \in \mathbf{x} $: 
-
-\begin{equation}
-\label{eq:eq_example} % label used to refer the eq in text
-s = \frac{1}{N} \sum_{i = 1}^{N} x_i. 
-\end{equation}
-
-Have you noticed that all the variables of the equation are defined using the \textbf{in-text} maths command \$.\$, and Eq.~\eqref{eq:eq_example} is treated as a part of the sentence with proper punctuation? Always treat an equation or expression as a part of the sentence. 
-
-\section{Example of a Figure in \LaTeX}
-Figure~\ref{fig:chart_a} is an example of a figure in \LaTeX. For more details, check the link:
-
-\href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{wikibooks.org/wiki/LaTeX/Floats,\_Figures\_and\_Captions}.
-
-\noindent
-Keep your artwork (graphics, figures, illustrations) clean and readable. At least 300dpi is a good resolution of a PNG format artwork. However, an SVG format artwork saved as a PDF will produce the best quality graphics. There are numerous tools out there that can produce vector graphics and let you save that as an SVG file and/or as a PDF file. One example of such a tool is the ``Flow algorithm software''. Here is the link for that: \href{http://www.flowgorithm.org/download/}{flowgorithm.org}.
+A foundational statistical approach used in healthcare predictive analytics for the to input sound, speed of computation, and convenience of use.
+\subsection{VGG 19}
+The VGG19 Model, sometimes referred to as the "Visual Geometry Group 19-layer model," is a complex convolutional neural network (CNN) architecture that is used to integrate deep learning models for computer vision applications. It is primarily focused on picture classification problems, such as identifying objects and features in photographs. The sixteen-layer VGG16 model has been replaced by the more advanced VGG19 model. As one of the most advanced convolutional neural networks at the moment, VGG19, on the other hand, offers an improved version with 16 convolutional layers and 3 fully connected layers. Because of its complexity of 19 layers, the model is capable of representing intricate hierarchical characteristics, improving its performance in picture classification tasks. The constant implementation of max-pooling layers and 3x3 convolutional filters throughout VGG19's design makes understanding and execution easier. Significant computer vision applications, such as object detection and picture segmentation, can benefit from the contributions made by the different layers.
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.3]{figures/chart.pdf}
+    \includegraphics[scale=0.8]{figures/Picture1.png}
     \caption{Example figure in \LaTeX.}
     \label{fig:chart_a}
 \end{figure}
+of accuracy. The principles behind its design have an impact on the evolution of later neural network designs, therefore its contributions go beyond simple picture categorization. Because of its long-lasting influence on modern CNN designs, researchers have experimented with modifying and adapting VGG19 for a variety of computer vision problems.
 
-\clearpage %  use command \clearpage when you want section or text to appear in the next page.
+In the field of healthcare predictive analysis, the VGG19 model is essential since it helps to categorize lung disorders. VGG19 offers a solid basis for accurately classifying lung diseases based on medical imaging data by utilizing its complex convolutional neural network architecture. VGG19's 19-layer architecture allows for precise differentiation between various lung disorders by skillfully capturing the intricate patterns and characteristics found in lung imaging. For predicting lung disease, the model is trained for 20 epochs.
+After training the VGG 19 model, the performance is evaluated using evaluation metrics like the confusion matrix, accuracy score, and F1 score.  It can be seen that the accuracy of the model increases with every epoch and after 20 epochs, the accuracy of the model is around 0.7793. The confusion matrix is plotted in a graph which is shown below.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.8]{figures/Picture2.png}
+    \caption{Example figure in \LaTeX.}
+    \label{fig:chart_a}
+\end{figure}
+\subsection{MobileNet}
+One prominent CNN design is MobileNet, which is well-known for operating efficiently on embedded systems and mobile devices.  MobileNet, which is well-known for requiring less memory and computing power. Its main goal is to achieve high efficiency by retrieving useful information from input photos while striking a balance between precision and model size. Its effectiveness qualifies it for real-time applications on resource-constrained devices, such as smartphones and Internet of Things sensors.
 
-\section{Example of an algorithm in \LaTeX}
-Algorithm~\ref{algo:algo_example} is a good example of an algorithm in \LaTeX.  
-\begin{algorithm}
-    \caption{Example caption: sum of all even numbers}
-    \label{algo:algo_example}
-    \begin{algorithmic}[1]
-        \Require{$ \mathbf{x}  = x_1, x_2, \ldots, x_N$}
-        \Ensure{$EvenSum$ (Sum of even numbers in $ \mathbf{x} $)}
-        \Statex
-        \Function{EvenSummation}{$\mathbf{x}$}
-        \State {$EvenSum$ $\gets$ {$0$}}
-        \State {$N$ $\gets$ {$length(\mathbf{x})$}}
-        \For{$i \gets 1$ to $N$}                    
-        \If{$ x_i\mod 2 == 0$}  \Comment check if a number is even?
-        \State {$EvenSum$ $\gets$ {$EvenSum + x_i$}}
-        \EndIf
-        \EndFor
-        \State \Return {$EvenSum$}
-        \EndFunction
-    \end{algorithmic}
-\end{algorithm}
- 
-\section{Example of code snippet  in \LaTeX}
+The improved precision that MobileNet can achieve in tasks like object classification, segmentation using semantics, and picture classification has led to its widespread use. Building on its success, other models such as MobileNetV2 and MobileNetV3 further improve effectiveness with low computational requirements. 
 
-Code Listing~\ref{list:python_code_ex} is a good example of including a code snippet in a report. While using code snippets, take care of the following:
-\begin{itemize}
-    \item do not paste your entire code (implementation) or everything you have coded. Add code snippets only. 
-    \item The algorithm shown in Algorithm~\ref{algo:algo_example} is usually preferred over code snippets in a technical/scientific report. 
-    \item Make sure the entire code snippet or algorithm stays on a single page and does not overflow to another page(s).  
-\end{itemize}
+It is crucial to develop models that can anticipate lung problems in advance because of function effectively on mobile and embedded devices. For mobile devices, MobileNet's insignificant memory consumption and minimal processing requirements enable the creation of accurate yet inexpensive predictive models. MobileNet enhances the effectiveness and precision of prediction tools by removing important information from medical pictures, which helps with lung disease detection and treatment promptly. MobileNet is useful for advancing healthcare technology because of its ability to strike a balance between scale and precision, particularly in the area of lung health predictive analytics.
 
-Here are three examples of code snippets for three different languages (Python, Java, and CPP) illustrated in Listings~\ref{list:python_code_ex}, \ref{list:java_code_ex}, and \ref{list:cpp_code_ex} respectively.  
+For healthcare predictive analysis, especially for predicting lung diseases, the MobileNet architecture is trained for 20 epochs. It can be seen that the accuracy of the model varies with every epoch and after 20  epochs, the accuracy is 0.8286. Also, better accuracy is seen at the 16th epoch with 0.8388. A confusion matrix is also plotted which visually represents the performance of the model with different classes of input images.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.8]{figures/Picture3.png}
+    \caption{Example figure in \LaTeX.}
+    \label{fig:chart_a}
+\end{figure}
+\subsection{ResNet}
+ResNet, or residual networks, is a key component of healthcare predictive analysis, especially in lung disease prediction research. Its unique architecture creates redundant connections, which enable the development of extremely complex neural networks. ResNet’s design is also ideal for transfer learning, which allows existing models to be improved on particular datasets associated with lung disease prediction. ResNet minimizes optimization and helps get over the issue of disappearing gradients that arise frequently while training deep networks. ResNet does this by employing residual learning, in which the network learns residual functions linked to the layer inputs. Because ResNet accelerates the creation of models and minimizes the requirement for huge labeled datasets, it is the method of choice for healthcare predictive analytic projects with sparse data. Doctors now have an effective tool for the early identification of conditions including TB, pneumonia, and lung cancer due to their capacity to identify minute details and anomalies in medical imaging. ResNet's deep layers improve the model in comprehending intricate relationships and patterns in medical imaging data, which increases its accuracy in forecasting when it comes to lung disorders. ResNet's adaptability to various imaging techniques, such as X-rays and computed tomography (CT), is very useful in the healthcare predictive analysis of lung disorders. 
 
-\begin{lstlisting}[language=Python, caption={Code snippet in \LaTeX ~and  this is a Python code example}, label=list:python_code_ex]
-import numpy as np
-
-x  = [0, 1, 2, 3, 4, 5] # assign values to an array
-evenSum = evenSummation(x) # call a function
-
-def evenSummation(x):
-    evenSum = 0
-    n = len(x)
-    for i in range(n):
-        if np.mod(x[i],2) == 0: # check if a number is even?
-            evenSum = evenSum + x[i]
-    return evenSum
-\end{lstlisting}
-
-Here we used  the ``\textbackslash clearpage'' command and forced-out the second listing example onto the next page. 
-\clearpage  %
-\begin{lstlisting}[language=Java, caption={Code snippet in \LaTeX ~and  this is a Java code example}, label=list:java_code_ex]
-public class EvenSum{ 
-    public static int evenSummation(int[] x){
-        int evenSum = 0;
-        int n = x.length;
-        for(int i = 0; i < n; i++){
-            if(x[i]%2 == 0){ // check if a number is even?
-                evenSum = evenSum + x[i];
-            }
-        }
-        return evenSum;     
-    }
-    public static void main(String[] args){ 
-        int[] x  = {0, 1, 2, 3, 4, 5}; // assign values to an array
-        int evenSum = evenSummation(x);
-        System.out.println(evenSum);
-    } 
-} 
-\end{lstlisting}
-
-
-\begin{lstlisting}[language=C, caption={Code snippet in \LaTeX ~and  this is a C/C++ code example}, label=list:cpp_code_ex]
-int evenSummation(int x[]){
-    int evenSum = 0;
-    int n = sizeof(x);
-    for(int i = 0; i < n; i++){
-        if(x[i]%2 == 0){ // check if a number is even?
-            evenSum = evenSum + x[i];
-    	}
-    }
-    return evenSum;     
-}
-
-int main(){
-    int x[]  = {0, 1, 2, 3, 4, 5}; // assign values to an array
-    int evenSum = evenSummation(x);
-    cout<<evenSum;
-    return 0;
-}
-\end{lstlisting}
+Through the use of ResNet's features, scholars and healthcare professionals may investigate innovative methods to improve the quality of life for patients, facilitate early treatments, and possibly save lives in the fight against lung illnesses. Furthermore, in real-world healthcare conditions, where data might be complex and broad, ResNet's capacity to accommodate interference and differences in picture quality makes it valuable. For this study, the ResNet model is trained for 5 epochs and it is seen that the accuracy is not good as compared to the other models which is around 0.2196. So further training the model with the ResNet model was stopped as the accuracy was not up to the mark. 
 
 
 
-\section{Example of in-text citation style}
-\subsection{Example of the equations and illustrations placement and reference in the text}
-Make sure whenever you refer to the equations, tables, figures, algorithms,  and listings for the first time, they also appear (placed) somewhere on the same page or in the following page(s). Always make sure to refer to the equations, tables and figures used in the report. Do not leave them without an \textbf{in-text citation}. You can refer to equations, tables and figures more them once.
 
-\subsection{Example of the equations and illustrations style}
-Write \textbf{Eq.} with an uppercase ``Eq`` for an equation before using an equation number with (\textbackslash eqref\{.\}). Use ``Table'' to refer to a table, ``Figure'' to refer to a figure, ``Algorithm'' to refer to an algorithm and ``Listing'' to refer to listings (code snippets). Note that, we do not use the articles ``a,'' ``an,'' and ``the'' before the words Eq., Figure, Table, and Listing, but you may use an article for referring the words figure, table, etc. in general.
-
-For example, the sentence ``A report structure is shown in \textbf{the} Table~\ref{tab:gen_template}'' should be written as ``A report structure is shown \textbf{in} Table~\ref{tab:gen_template}.'' 
- 
 
 \section{Summary}
 Write a summary of this chapter.
