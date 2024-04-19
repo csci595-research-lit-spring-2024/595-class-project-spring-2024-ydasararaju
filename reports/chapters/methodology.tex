@@ -3,52 +3,117 @@
 \chapter{Methodology}
 \label{ch:method} % Label for method chapter
 
+\section{Importing the necessary Libraries}
+The first step in any kind of data processing, especially in machine learning, is to include the necessary Python libraries. A variety of activities, including data visualization, manipulation, and handling, statistical analysis, and the creation and assessment of machine learning and deep learning models, are made possible by these libraries. Several native and external libraries for Python may be included in a Jupyter Notebook environment. Each library has its unique feature and capability to analyze and handle complex datasets. Adding these Python modules to the project improves the predictive power of the created models while streamlining the data analysis process. By utilizing each library's unique capabilities, researchers may tackle the difficult problem of forecasting lung disease outbreaks with an extensive toolset, opening the door for prompt treatments and well-informed healthcare plans.
+\subsection{Pandas}
+\label{subsec:se_chpters}
+Pandas is a powerful Python package made for analysis and data manipulation. It makes structured data processing simple by offering data structures like DataFrames. Pandas make it easy
+to effectively carry out operations like data cleansing, modification, data aggregation, data visualization, and data exploration.
+
+\subsection{Numpy}
+Numpy is an additional Python module that is useful for numerical operations on arrays and multi-dimensional data structures. The use of linear algebra expands the fundamental mathematical operations for managing data and provides users with several tools for statistical analysis and array management
+
+\subsection{Matplotlib}
+Matplotlib is a Python data visualization package that offers a wide range of data visualization
+tools and functions that make data reading easy. A variety of graph types, including scatterplots,
+pie charts, bars, and histograms are available. Furthermore, these graphs may be exported in
+JPEG or PNG formats
+
+\subsection{Seaborn}
+Seaborn is one the best data visualization libraries used in Python and is a higher version of
+Matplotlib. It facilitates various functions and methods that can operate in data frames to
+perform the statistical plotting of graphs like heatmaps and histograms. Various graphs provided
+by this library include bar charts, histograms, error charts, scatterplots, and also heat maps which
+are not available in Matplotlib. It also has a feature that can select the colors that can disclose
+the underlying patterns and trends in the data.
+
+\subsection{Scikit-learn}
+This Python library is available as open-source and is used to build various machine learning
+methods. To train different machine learning methods and deep learning models, such as decision
+trees, support vector machines (SVM), naive Bayes, and classifiers, It also provides a variety
+of classification, regression, clustering, supervised and unsupervised techniques. By determining
+the accuracy score and producing the classification report, it also aids in evaluating the trained
+model’s correctness; nevertheless, it cannot execute neural network models.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.9]{figures/libraries.png}
+    \caption{Importing Libraries}
+    \label{fig:chart_a}
+\end{figure}
+
+
+
 
 \section{Data Collection}
-Initially, the goal is to collect a large variety of information from many sources in order to have a thorough knowledge of the variables that lead to lung disease epidemics. Having access to both past and present information is made easier by partnerships with research groups, health departments, and healthcare organizations. Additionally, social media and internet-based sources of information complement traditional data streams, adding neighbourhood medical trends and public views of symptoms related to breathing to the dataset. A lung disease dataset is chosen from an online source Kaggle which contains the image of chest X-rays of 4 lung-related diseases. The model's input dataset is composed of multiple lung X-rays that have been gathered over time and labelled with four distinct breathing conditions. 
-\subsection{Data Analysis}
+Initially, the goal is to collect a large variety of information from many sources to have a thorough knowledge of the variables that lead to lung disease epidemics. Having access to both past and present information is made easier by partnerships with research groups, health departments, and healthcare organizations. Additionally, social media and internet-based sources of information complement traditional data streams, adding neighbourhood medical trends and public views of symptoms related to breathing to the dataset. Data collecting meets strict guidelines to guarantee safeguards, authenticity, and adherence to confidentiality regulations. To conduct convoluted predictive modelling, a machine learning algorithm based on deep learning techniques is chosen. A lung disease dataset is chosen from an online source Kaggle which contains the image of chest X-rays of 4 lung-related diseases. The model's input dataset is composed of multiple lung X-rays that have been gathered over time and labelled with four distinct breathing conditions: "Viral Pneumonia," "Normal," "Tuberculosis," "Bacterial Pneumonia," and "Corona Virus Disease." Four diseases are adequate to analyze, and the effectiveness of the given model will be controlled using various classification metrics [4] available. All of the diseases above are readily transmissible and have the potential to cause a worldwide global epidemic in the future. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.9]{figures/Picture99.jpg}
+    \caption{Data Collection}
+    \label{fig:chart_a}
+\end{figure}
+
+\section{Data Analysis}
 \label{subsec:se_chpters}
 A comprehensive analysis is performed on the gathered data to identify trends, patterns, and relationships related to lung disease epidemics. To learn more about the features of the dataset, initial investigation methods include data visualization, relationship matrices, and general statistics. Then, correlations between putative risk variables and the incidence of lung disease outbreaks are found using sophisticated statistical techniques including regression modelling and period analysis. Machine learning methods are used to find complicated relationships in the information, such as support vector machines and decision tree techniques. Preferences for choosing a model include understanding, adaptability, and reliability across various demographics and geographical areas. The accuracy and significance of data are improved for predictive modelling by data preparation. Enhancing the efficiency of models entails implementing features in addition to maintenance, normalizing, and assigning values that are not present. Overfitting hazards and computational difficulty are minimized through selected features and the reduction of dimensionality algorithms. Different test datasets are used in validation processes like bootstrapping to evaluate the efficiency and adaptability of the model. Compatibility with clinical standards and best practices is ensured by working alongside subject specialists.
 
 
-\subsection{Data Processing}
+\section{Data Processing}
 Python simplifies interacting with data easier for users by providing a large number of built-in libraries for data processing and visualization. By highlighting trends and correlations, graphical representations of data, such as graphs and charts, make it easier to analyse and examine the data. Matplotlib and Seaborn are two popular Python libraries for data visualization that are available for usage in this context. These libraries include a variety of graphs that exhibit data in diverse ways, such as line plots, bar plots, and histograms. Density charts, for example, are useful for showing the shape of data and for calculating the probability density function and ongoing dataset allocation. By visualising data set descriptions and statistical distributions, box plots, on the other hand, are a useful tool for identifying possible outliers. 
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.3]{figures/graph.jpg}
-    \caption{Example figure in \LaTeX.}
+    \includegraphics[scale=0.5]{figures/graph.jpg}
+    \caption{Image count for Different Data Class}
     \label{fig:chart_a}
 \end{figure}
+
+\subsection{Training and Test split}
 
 Further processing the data, the dataset is split into 3 parts. 60 percent of the data is divided into training , 20 percent data is divided into validation and the remaining 20 percent of the data is divided into testing parts. This distributed dataset is passed on as input to train the models in a much more efficient and uniform manner. By splitting up the data set into training and testing sections, it is possible to train the model on the first one and assess its performance on the remaining part while the validation part will ensure the model’s accuracy on the trained data.In order for the model to train efficiently and produce precise predictions, this guarantees that the data is spread out accurately. Additionally, dividing the dataset prevents overfitting, a condition in which a model performs well on training data but badly on fresh data. 
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.3]{figures/graph2.jpg}
-    \caption{Example figure in \LaTeX.}
+    \includegraphics[scale=0.5]{figures/graph2.jpg}
+    \caption{Image count for different Data split}
     \label{fig:chart_a}
 \end{figure}
 
 
-\subsection{Data Agumentation}
+\section{Data Agumentation}
 In order to increase the diversity of input data, data augmentation is used to add authentic yet unpredictable modifications to the training dataset that is supplied for neural network models. By minimally modifying the photos, it seeks to produce a copy of the original dataset. The method increases both the amount as well as the standard of the data. TensorFlow's Image Data Generator is used to apply different image-level alterations, such as height and width shifting, enlargement, and other required modifications, to the dataset. By making these little changes, the original dataset may be replicated with a greater degree of variability in the data. Rotation, width shift, zoom, and horizontal inversion are the four specific procedures that are used. The other changes are also done in this manner to make the dataset more diverse. In order to avoid underfitting and guarantee that the model gains knowledge from a variety of instances, image augmentation is especially applied to the training data.
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.3]{figures/scan .jpg}
-    \caption{Example figure in \LaTeX.}
+    \includegraphics[scale=0.5]{figures/scan .jpg}
+    \caption{Scanning report for image Agumentation}
     \label{fig:chart_a}
 \end{figure}
 \section {Implementation}
-prediction of lung disease outbreaks is VGG 19, Mobile Net, and RestNet. When the result parameter indicates whether a lung disease epidemic is present or not, it works well for binary categorization applications. Based on input parameters such as patient statistics, surroundings, and past illness trends, the model calculates the likelihood that an epidemic will occur. VGG 19 measures how predictor variables and the chance of an outbreak of lung disease are related to each other by matching an exponential function to the input data. Model parameters help with understanding and risk evaluation by revealing the intensity and course of relationships. These models, regardless of their clarity, have several benefits, such as resilience Establishing predictive algorithms that can precisely and promptly anticipate epidemics of lung diseases is the last step. Prediction strength and accuracy are improved by combined learning techniques. Metrics for evaluating models, such as the degree of consciousness and particularity, are used to measure their predictive power and direct their modification. Model adjustment and ongoing monitoring respond to varying data distributions. By clarifying the primary variables influencing forecasted results, understanding tools promote the involvement of stakeholders and decision-making. Preventive treatments and utilization of resource techniques are made possible by incorporating public health monitoring systems and systems that support clinical decisions.
+prediction of lung disease outbreaks is VGG 19, Mobile Net, and RestNet. When the result parameter indicates whether a lung disease epidemic is present or not, it works well for binary categorization applications. Based on input parameters such as patient statistics, surroundings, and past illness trends, the model calculates the likelihood that an epidemic will occur. VGG 19 measures how predictor variables and the chance of an outbreak of lung disease are related to each other by matching an exponential function to the input data. Model parameters help with understanding and risk evaluation by revealing the intensity and course of relationships. These models, regardless of their clarity, have several benefits. 
+
+\subsection {Predictive Modeling}
+ Establishing predictive algorithms that can precisely and promptly anticipate epidemics of lung diseases is the last step. Prediction strength and accuracy are improved by combined learning techniques. Metrics for evaluating models, such as the degree of consciousness and particularity, are used to measure their predictive power and direct their modification. Model adjustment and ongoing monitoring respond to varying data distributions. By clarifying the primary variables influencing forecasted results, understanding tools promote the involvement of stakeholders and decision-making. Preventive treatments and utilization of resource techniques are made possible by incorporating public health monitoring systems and systems that support clinical decisions.
 
 A convolutional neural network-based deep learning model is developed to identify the kind of lung illness by extracting relevant data from the input picture during training and assessment. It is possible to gain additional insight into the demand for computational resources within the healthcare industry and the potential of predictive analytics and modeling for analyzing healthcare management today and preventing global disease outbreaks in the future by addressing research challenges. The earlier pertinent preventative measures are implemented, the more quickly the disease outbreak can be prevented. To determine how well the model can detect the condition, it is evaluated using a variety of classification measures, including the f1 score and precision score. The model will be trained and predicted entirely in Python, and several libraries including Tensorflow, OpenCV, and Keras will be utilized to construct the model and store it locally for further prediction and improvement. 
 
-A foundational statistical approach used in healthcare predictive analytics for the to input sound, speed of computation, and convenience of use.
+A foundational statistical approach used in healthcare predictive analytics for the prediction of lung disease outbreaks is VGG 19, Mobile Net, and RestNet. When the result parameter indicates whether a lung disease epidemic is present or not, it works well for binary categorization applications. Based on input parameters such as patient statistics, surroundings, and past illness trends, the model calculates the likelihood that an epidemic will occur. VGG 19 measures how predictor variables and the chance of an outbreak of lung disease are related to each other by matching an exponential function to the input data. Model parameters help with understanding and risk evaluation by revealing the intensity and course of relationships. These models, regardless of their clarity, have several benefits, such as resilience to input sound, speed of computation, and convenience of use.
+
+\subsection{Tensorflow}
+Among the several open-source machine learning frameworks for Python, TensorFlow stands out as being exceptionally robust and trustworthy. Offering several network layers makes the creation and training of various artificial neural network models and networks easier. In predictive analysis for healthcare, TensorFlow is essential, particularly in studies that aim to predict lung conditions. TensorFlow's robust framework facilitates the development of sophisticated models that draw insightful conclusions from medical data, such as MRI scans and patient medical records. Through the use of TensorFlow, healthcare professionals may investigate new opportunities for the early identification, diagnosis, and cure of lung disorders, eventually leading to better quality of life and vital results. TensorFlow offers an abundance of pre-made modules and intuitive APIs that make it easy for developers to create complex algorithms and improve the efficiency of models.
+
+The design and functionality of deep learning models are significantly shaped by these layers. Additionally, TensorFlow provides versatility in neural network architecture by allowing custom layers to be created to meet specific requirements. This feature makes it easier for developers to design effective neural networks that are suited for different machine learning and deep learning applications. TensorFlow has a large number of layers—both input and output layers—available. There are also a lot of hidden layers in it including flatten, recurrent, dropout, convolutional, Max-pooling, and dense layers. TensorFlow's combination with predictive modeling for healthcare represents a major advancement in the use of various techniques for major health-related problems. 
+
+\subsection{Adam Optimizer}
+The Adam optimizer, sometimes called Adaptive Moment Estimation is very beneficial to optimizing the working of the frameworks of neural networks which is mostly used in predictive applications. By using the decay rates of first and second-order features and previous inclination values, its adaptive learning rate technique continuously changes the learning rate for every factor. Healthcare providers and researchers may now develop more accurate and reliable prediction models for early evaluation, treatment preparation, and early detection of lung diseases due to the Adam optimizer's adaptive learning rate methodology and powerful optimization functionalities. Furthermore, practical situations where the quality of information changes can benefit from the Adam optimizer's capacity to manage complex and different healthcare data. 
+
+Better overall efficiency and faster resolution are achieved by the optimizer as a result of its flexibility in navigating challenging optimization problems. The effective modification of learning rates by the Adam optimizer mitigates the likelihood of being trapped in local minimums and promotes more seamless optimization pathways, hence augmenting the precision of lung disease prediction models. This breakthrough improves patient outcomes and expands the use of predictive analytics in the medical field. The Adam optimizer is essential for fine-tuning predictive models to find significant patterns from a variety of medical datasets, including imaging scans, patient data, and clinical records, in the field of lung disease prediction, where accurate and early diagnosis counts tremendously.
+
+
 \subsection{VGG 19}
 The VGG19 Model, sometimes referred to as the "Visual Geometry Group 19-layer model," is a complex convolutional neural network (CNN) architecture that is used to integrate deep learning models for computer vision applications. It is primarily focused on picture classification problems, such as identifying objects and features in photographs. The sixteen-layer VGG16 model has been replaced by the more advanced VGG19 model. As one of the most advanced convolutional neural networks at the moment, VGG19, on the other hand, offers an improved version with 16 convolutional layers and 3 fully connected layers. Because of its complexity of 19 layers, the model is capable of representing intricate hierarchical characteristics, improving its performance in picture classification tasks. The constant implementation of max-pooling layers and 3x3 convolutional filters throughout VGG19's design makes understanding and execution easier. Significant computer vision applications, such as object detection and picture segmentation, can benefit from the contributions made by the different layers.
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.8]{figures/Picture1.png}
-    \caption{Example figure in \LaTeX.}
+    \caption{Different Layers in VGG 19.}
     \label{fig:chart_a}
 \end{figure}
 of accuracy. The principles behind its design have an impact on the evolution of later neural network designs, therefore its contributions go beyond simple picture categorization. Because of its long-lasting influence on modern CNN designs, researchers have experimented with modifying and adapting VGG19 for a variety of computer vision problems.
@@ -58,7 +123,7 @@ After training the VGG 19 model, the performance is evaluated using evaluation m
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.8]{figures/Picture2.png}
-    \caption{Example figure in \LaTeX.}
+    \caption{Confusion Matrix of VGG 19}
     \label{fig:chart_a}
 \end{figure}
 \subsection{MobileNet}
@@ -72,7 +137,7 @@ For healthcare predictive analysis, especially for predicting lung diseases, the
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.8]{figures/Picture3.png}
-    \caption{Example figure in \LaTeX.}
+    \caption{Confusion Matrix of MobileNet}
     \label{fig:chart_a}
 \end{figure}
 \subsection{ResNet}
